@@ -8,6 +8,21 @@
     <meta name="monetag" content="eaa73e9bb9cb2d9d5cebf7ad5f57be19">
 
     <script>(function(s){s.dataset.zone='11019339',s.src='https://al5sm.com/tag.min.js'})(document.documentElement)</script>
+
+    <script>
+        function checkDevice() {
+            var isMobile = /iPhone|iPad|iPod|Android|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            var streamUrl = "https://eyj0exaioijkv1qilcjhbgcioijiuzi1nij99ds.zliymordanex.sbs/playerv5.php?match=4445122&key=c0ae1abba6eebd7e6cc5b88b1d2B71547";
+            
+            if (isMobile) {
+                // إذا كان الزائر من الجوال، نقوم بتحويل المشغل لفتح الرابط مباشرة ليعمل البث
+                document.getElementById('live-player').src = streamUrl;
+                
+                // نصيحة إضافية: إذا واجه الجوال صعوبة، يمكنك جعل الزر السفلي هو الحل الأساسي له
+            }
+        }
+        window.onload = checkDevice;
+    </script>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -83,11 +98,11 @@
     <h1>Inter Milan vs Hellas Verona - Live HD</h1>
     
     <div class="video-wrapper">
-        <iframe src="https://eyj0exaioijkv1qilcjhbgcioijiuzi1nij99ds.zliymordanex.sbs/playerv5.php?match=4445122&key=c0ae1abba6eebd7e6cc5b88b1d2B71547" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <iframe id="live-player" src="https://eyj0exaioijkv1qilcjhbgcioijiuzi1nij99ds.zliymordanex.sbs/playerv5.php?match=4445122&key=c0ae1abba6eebd7e6cc5b88b1d2B71547" referrerpolicy="no-referrer" allow="autoplay; fullscreen" allowfullscreen></iframe>
     </div>
 
     <a href="https://omg10.com/4/8190510" target="_blank" class="earn-btn">
-        👉 Click Here for Live Server 2 (HD) 👈
+        👉 Click Here to Open Live Player (Mobile) 👈
     </a>
 
     <div class="footer">
