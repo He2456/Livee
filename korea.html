@@ -84,22 +84,23 @@
             cursor: pointer;
             background: rgba(0,0,0,0.01);
         }
-        .earn-btn {
+        /* زر تليجرام المطور باللون الأزرق وجاذب للانتباه */
+        .telegram-btn {
             display: inline-block;
-            background: linear-gradient(135deg, #ff0055, #990033);
+            background: linear-gradient(135deg, #0088cc, #005580);
             color: #ffffff;
             font-weight: bold;
             font-size: 20px;
             padding: 15px 40px;
             text-decoration: none;
             border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(255, 0, 85, 0.4);
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
             animation: pulse 1.5s infinite;
         }
         @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 4px 15px rgba(255, 0, 85, 0.4); }
-            50% { transform: scale(1.03); box-shadow: 0 6px 25px rgba(255, 0, 85, 0.7); }
-            100% { transform: scale(1); box-shadow: 0 4px 15px rgba(255, 0, 85, 0.4); }
+            0% { transform: scale(1); box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4); }
+            50% { transform: scale(1.03); box-shadow: 0 6px 25px rgba(0, 136, 204, 0.7); }
+            100% { transform: scale(1); box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4); }
         }
         .footer {
             margin-top: 30px;
@@ -115,7 +116,7 @@
     <div class="live-badge">بث مباشر HD</div>
     
     <div class="video-container">
-        <!-- طبقة الاقتناص الإعلاني: تفتح إعلان البوب اندر عند الضغط لتشغيل الفيديو -->
+        <!-- طبقة الاقتناص الإعلاني: تفتح إعلان البوب اندر عند الضغط لتشغيل الفيديو وتجني الأرباح -->
         <div class="player-overlay" onclick="this.style.display='none'; document.getElementById('match-video').play();"></div>
         
         <div class="video-wrapper">
@@ -126,9 +127,9 @@
         </div>
     </div>
 
-    <!-- زر الرابط المباشر (Direct Link) مخصص لجلب أرباح النقرات بقوة -->
-    <a href="https://omg10.com/4/8190510" target="_blank" class="earn-btn">
-        🔥 اضغط هنا للانتقال إلى سيرفر احتياطي (بدون تقطيع) 🔥
+    <!-- زر توجيه الزوار إلى قناتك في تليجرام مباشرة لزيادة المشتركين -->
+    <a href="https://t.me/cup2026g" target="_blank" class="telegram-btn">
+        📢 اشترك في قناتنا على تليجرام لمتابعة جميع المباريات بدون تقطيع 📢
     </a>
 
     <div class="footer">
