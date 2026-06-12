@@ -1,19 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>South Korea vs Czech Republic - Live Stream</title>
+    <title>البث المباشر لمباراة كوريا الجنوبية والتشيك | يلا شوت الجديد</title>
     
     <!-- كود تحقق ملكية الموقع الخاص بك -->
     <meta name="monetag" content="eaa73e9bb9cb2d9d5cebf7ad5f57be19">
 
-    <!-- كود الإعلانات الخاص بك من Monetag لحصد أرباح الزوار -->
-    <script>(function(s){s.dataset.zone='11019339',s.src='https://al5sm.com/tag.min.js'})(document.documentElement)</script>
-
-    <!-- مكتبة تشغيل روابط m3u8 (Video.js) -->
-    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
-    <script src="https://vjs.zencdn.net/7.20.3/video.js"></script>
+    <!-- كود إعلانات Monetag المطور لتخطي الحظر وضمان الأرباح -->
+    <script src="https://groleegls.net/act/files/tag.min.js?z=11019339" data-cfasync="false" async></script>
 
     <style>
         body {
@@ -38,11 +34,24 @@
         h1 {
             color: #00ffff;
             font-size: 24px;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        /* حاوية الفيديو مع طبقة الاقتناص الإعلاني لصالحك */
+        .live-badge {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 20px;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
         .video-container {
             position: relative;
             width: 100%;
@@ -53,14 +62,18 @@
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8);
             background: #000;
             overflow: hidden;
+            position: relative;
+            padding-bottom: 56.25%; /* نسبة 16:9 */
+            height: 0;
         }
-        /* ضبط أبعاد مشغل الفيديو ليكون متجاوباً 100% مع الجوال */
-        .video-js {
-            width: 100% !important;
-            height: auto !important;
-            aspect-ratio: 16 / 9;
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
-        /* طبقة شفافة فوق المشغل تختفي بعد أول نقرة لتفعيل إعلانك وتجني الأرباح */
+        /* طبقة اقتناص النقرات لتشغيل الإعلان أولاً */
         .player-overlay {
             position: absolute;
             top: 0;
@@ -76,66 +89,52 @@
             background: linear-gradient(135deg, #ff0055, #990033);
             color: #ffffff;
             font-weight: bold;
-            font-size: 18px;
-            padding: 15px 35px;
+            font-size: 20px;
+            padding: 15px 40px;
             text-decoration: none;
             border-radius: 50px;
             box-shadow: 0 4px 15px rgba(255, 0, 85, 0.4);
-            text-transform: uppercase;
             animation: pulse 1.5s infinite;
         }
         @keyframes pulse {
             0% { transform: scale(1); box-shadow: 0 4px 15px rgba(255, 0, 85, 0.4); }
-            50% { transform: scale(1.05); box-shadow: 0 6px 25px rgba(255, 0, 85, 0.7); }
+            50% { transform: scale(1.03); box-shadow: 0 6px 25px rgba(255, 0, 85, 0.7); }
             100% { transform: scale(1); box-shadow: 0 4px 15px rgba(255, 0, 85, 0.4); }
         }
         .footer {
             margin-top: 30px;
-            font-size: 12px;
-            color: #555;
+            font-size: 13px;
+            color: #666;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>South Korea vs Czech Republic - Live HD</h1>
+    <h1>مباراة كوريا الجنوبية ضد جمهورية التشيك</h1>
+    <div class="live-badge">بث مباشر HD</div>
     
     <div class="video-container">
-        <!-- طبقة اقتناص النقرة الأولى لصالح حسابك الإعلاني -->
-        <div class="player-overlay" onclick="this.style.display='none';"></div>
+        <!-- طبقة الاقتناص الإعلاني: تفتح إعلان البوب اندر عند الضغط لتشغيل الفيديو -->
+        <div class="player-overlay" onclick="this.style.display='none'; document.getElementById('match-video').play();"></div>
         
         <div class="video-wrapper">
-            <!-- مشغل m3u8 المتطور المباشر -->
-            <video
-                id="my-video"
-                class="video-js vjs-default-skin vjs-big-play-centered"
-                controls
-                preload="auto"
-                data-setup='{}'>
+            <video id="match-video" controls playsinline crossorigin="anonymous">
                 <source src="https://watch.revyo.online/channel1/live.m3u8" type="application/x-mpegURL">
-                <p class="vjs-no-js">
-                    To view this video please enable JavaScript, and consider upgrading to a web browser that
-                    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                </p>
+                متصفحك لا يدعم مشغل الفيديو الحالي.
             </video>
         </div>
     </div>
 
-    <!-- زر الرابط الإعلاني الدايركت الخاص بك لزيادة الأرباح -->
+    <!-- زر الرابط المباشر (Direct Link) مخصص لجلب أرباح النقرات بقوة -->
     <a href="https://omg10.com/4/8190510" target="_blank" class="earn-btn">
-        🔥 Click Here for Backup Live Server (HD) 🔥
+        🔥 اضغط هنا للانتقال إلى سيرفر احتياطي (بدون تقطيع) 🔥
     </a>
 
     <div class="footer">
-        © 2026 Live Football Streaming. All rights reserved.
+        جميع الحقوق محفوظة © 2026 موقع البث المباشر للمباريات.
     </div>
 </div>
 
-<script>
-    // تشغيل الفيديو تلقائياً وبدء تفعيل المشغل
-    var player = videojs('my-video');
-</script>
-
 </body>
-  </html>
+</html>
